@@ -36,8 +36,7 @@
     "upgrade.base": "yarn upgrade --latest && rm yarn.lock | true && yarn | true && yarn lint.fix || true",
     "up": "yarn upgrade.base && yarn lint && yarn build && yarn test"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-json": "^4.0.1",
@@ -59,48 +58,5 @@
     "ts-jest": "^26.1.4",
     "ts-node": "^8.8.1",
     "typescript": "^3.9.7"
-  },
-	"jest": {
-		"maxWorkers": 4,
-		"testTimeout": 300000,
-		"testEnvironment": "node",
-		"testPathIgnorePatterns": [
-			"<rootDir>/tmp/",
-			"<rootDir>/src/",
-			"<rootDir>/node_modules/",
-			"<rootDir>/build/__tests__/testDirsAndFiles/"
-		],
-		"testMatch": [
-			"**/__tests__/**/*.test.js?(x)"
-		],
-		"moduleNameMapper": {
-			"^#spruce/schemas/fields/(.*)": "<rootDir>/node_modules/@sprucelabs/schema/build/.spruce/schemas/fields/$1",
-			"^#spruce/(.*)$": "<rootDir>/build/.spruce/$1"
-		},
-		"reporters": [
-			"default",
-			[
-				"<rootDir>/build/sheetsReporter/SheetsReporter.js",
-				{
-					"sheetId": "1DoWM7mYgGDa-PJXptLomrZmbIBZiuxS1YiAsRXU2Gm0",
-					"worksheetId": 843037832,
-					"testMap": {
-						"canBootTheCli": "C4",
-						"getsGoodHealthCheckAndNothingElse": "C5",
-						"schemaPassesHealthCheck": "C6",
-						"builderAndDefinitionFileValidates": "C7",
-						"schemasStayInSyncWhenDefinitionsAreDeleted": "C8",
-						"installsSchemasIfNotInstalled": "C9",
-						"errorFileShouldBeUpdated": "C10",
-						"buildCreatesValidDefinitionAndOptionsFile": "C11",
-						"errorsStayInSyncWhenSchemasAreDeleted": "C12",
-						"createsValidListener": "C13",
-						"canGetLatestVersionBasedOnDir": "C16",
-						"canBuildSkill": "C24",
-						"canWatchAndBuild": "C25"
-					}
-				}
-			]
-		]
-	}
+  }
 }
